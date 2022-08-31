@@ -57,3 +57,31 @@ chsh -s $(which zsh)
     ```
 
 3. Restart zsh (such as by opening a new instance of your terminal emulator).
+
+## Run as root
+
+Copy the files and folders to the root
+```bash
+sudo cp $HOME/.zshrc /root
+```
+
+```bash
+sudo cp -r $HOME/.oh-my-zsh /root 
+```
+
+Edit the ```.zshrc``` file in root folder
+```bash
+sudo nano /root/.zshrc
+```
+
+Change the line in your .zshrc file
+```bash
+#From
+export ZSH="$HOME/.oh-my-zsh"
+#To
+export ZSH="/root/.oh-my-zsh"
+```
+![image](https://user-images.githubusercontent.com/109834646/187715298-a3f57dc1-1bc9-470f-aa1c-8bc93a2c22d2.png)
+
+
+Restart the terminal
